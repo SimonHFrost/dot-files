@@ -159,3 +159,6 @@ set nowrap
 "
 " No Swap file
 set noswapfile
+
+"Esc cancels highlights
+nnoremap <ESC> :noh<CR><ESC>
