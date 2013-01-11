@@ -124,14 +124,14 @@ set pastetoggle=<F11>
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
-"set shiftwidth=2
-"set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 
 "------------------------------------------------------------
@@ -147,6 +147,8 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+"Esc cancels highlights
+nnoremap <ESC> :noh<CR><ESC>
 
 "------------------------------------------------------------
 " No Auto Wrap
@@ -160,5 +162,5 @@ set nowrap
 " No Swap file
 set noswapfile
 
-"Esc cancels highlights
-nnoremap <ESC> :noh<CR><ESC>
+" Use F11 to toggle between displaying whitespace characters
+noremap <F11> :set list!<CR>
