@@ -6,14 +6,53 @@
 "              on this file is still a good idea.
 
 "------------------------------------------------------------
+" Vundle Setup {{{1
+" Initial Vundle config and individual bundle references
+
+ set nocompatible               " be iMproved
+ filetype off                   " required!
+
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " Vundle is required!
+ Bundle 'gmarik/vundle'
+
+ " My Bundles here:
+ "
+ " original repos on github
+ Bundle 'tpope/vim-fugitive'
+ Bundle 'Lokaltog/vim-easymotion'
+ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Bundle 'tpope/vim-rails.git'
+ Bundle 'tomasr/molokai'
+
+ " vim-scripts repos
+ Bundle 'L9'
+ Bundle 'FuzzyFinder'
+
+ " non github repos
+ " Bundle 'git://git.wincent.com/command-t.git'
+ " git repos on your local machine (ie. when working on your own plugin)
+ " Bundle 'file:///Users/gmarik/path/to/plugin'
+ " ...
+
+ filetype plugin indent on     " required!
+ "
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
+
+"------------------------------------------------------------
 " Features {{{1
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
-
-" Set 'nocompatible' to ward off unexpected things that your distro might
-" have made, as well as sanely reset options when re-sourcing .vimrc
-set nocompatible
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -164,3 +203,5 @@ set noswapfile
 
 " Use F11 to toggle between displaying whitespace characters
 noremap <F11> :set list!<CR>
+
+colorscheme molokai
