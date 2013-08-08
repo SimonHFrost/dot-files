@@ -1,84 +1,47 @@
-" URL: http://vim.wikia.com/wiki/Example_vimrc
+" Based_on: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-" Description: A minimal, but feature rich, example .vimrc. If you are a
-"              newbie, basing your first .vimrc on this file is a good choice.
-"              If you're a more advanced user, building your own .vimrc based
-"              on this file is still a good idea.
 
-"------------------------------------------------------------
-" Vundle Setup {{{1
-" Initial Vundle config and individual bundle references
-
- set nocompatible               " be iMproved
- filetype off                   " required!
-
+" vundle setup
+" ------------
+ set nocompatible
+ filetype off 
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
-
- " Vundle is required!
  Bundle 'gmarik/vundle'
 
- " My Bundles here:
- "
- " original repos on github
+ " :h vundle for help
+ " :BundleList
+ " :BundleInstall
+ 
+ " github bundles
  Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
  Bundle 'tomasr/molokai'
 
- " vim-scripts repos
+ " vim-scripts bundles
  Bundle 'L9'
  Bundle 'FuzzyFinder'
 
- " non github repos
+ " other bundles
  " Bundle 'git://git.wincent.com/command-t.git'
- " git repos on your local machine (ie. when working on your own plugin)
  " Bundle 'file:///Users/gmarik/path/to/plugin'
- " ...
 
- filetype plugin indent on     " required!
- "
- " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+" Features
+" -------------
 
-"------------------------------------------------------------
-" Features {{{1
-"
-" These options and commands enable some very useful features in Vim, that
-" no user should have to live without.
-
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
+" autodetermine filetype
 filetype indent plugin on
 
 " Enable syntax highlighting
 syntax on
 
+" Must have options 
+" -----------------
 
-"------------------------------------------------------------
-" Must have options {{{1
-"
-" These are highly recommended options.
-
-" One of the most important options to activate. Allows you to switch from an
-" unsaved buffer without saving it first. Also allows you to keep an undo
-" history for multiple files. Vim will complain if you try to quit without
-" saving, and swap files will keep you safe if your computer crashes.
+" hidden buffers
 set hidden
-
-" Note that not everyone likes working this way (with the hidden option).
-" Alternatives include using tabs or split windows instead of re-using the same
-" window for multiple buffers, and/or:
-" set confirm
-" set autowriteall
 
 " Better command-line completion
 set wildmenu
@@ -90,19 +53,8 @@ set showcmd
 " mapping of <C-L> below)
 set hlsearch
 
-" Modelines have historically been a source of security vulnerabilities. As
-" such, it may be a good idea to disable them and use the securemodelines
-" script, <http://www.vim.org/scripts/script.php?script_id=1876>.
-" set nomodeline
-
-
-"------------------------------------------------------------
-" Usability options {{{1
-"
-" These are options that users frequently set in their .vimrc. Some of them
-" change Vim's behaviour in ways which deviate from the true Vi way, but
-" which are considered to add usability. Which, if any, of these options to
-" use is very much a personal preference, but they are harmless.
+" Usability options 
+" -----------------
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -142,11 +94,8 @@ set t_vb=
 " Enable use of the mouse for all modes
 set mouse=a
 
-" Set the command window height to 2 lines, to avoid many cases of having to
-" "press <Enter> to continue"
 set cmdheight=2
 
-" Display line numbers on the left
 set number
 
 " Quickly time out on keycodes, but never time out on mappings
@@ -155,28 +104,16 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
 
-
-"------------------------------------------------------------
-" Indentation options {{{1
-"
-" Indentation settings according to personal preference.
-
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-"set shiftwidth=2
-"set softtabstop=2
-"set expandtab
+" Indentation options
+" -------------------
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
 set shiftwidth=4
 set tabstop=4
 
-
-"------------------------------------------------------------
-" Mappings {{{1
-"
-" Useful mappings
+" Mappings
+" --------
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
@@ -189,16 +126,16 @@ nnoremap <C-L> :nohl<CR><C-L>
 "Esc cancels highlights
 nnoremap <ESC> :noh<CR><ESC>
 
-"------------------------------------------------------------
 " No Auto Wrap
-"
+" ------------
+
 set textwidth=0
 set wrapmargin=0
 set nowrap
 
-"------------------------------------------------------------
-"
-" No Swap file
+" Misc
+" ----
+
 set noswapfile
 
 " Use F11 to toggle between displaying whitespace characters
