@@ -1,0 +1,17 @@
+[user]
+	name = simonhfrost
+	email = simonhfrost@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = simple
+[auto]
+	crlf = true
+[pull]
+	rebase = true
+[color]
+	ui = true
+[alias]
+	s = status -s
+	lg = log --oneline --decorate --all --graph
