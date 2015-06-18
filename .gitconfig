@@ -1,19 +1,16 @@
+[core]
+        user = Simon Frost
+        email = simonhfrost@gmail.com
+        excludesfile = ~/.gitignore
 [user]
-	name = simonhfrost
-	email = simonhfrost@gmail.com
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+        name = Simon Frost
+        email = simon.frost@blacklane.com
 [push]
-	default = simple
-[auto]
-	crlf = true
-[pull]
-	rebase = true
-[color]
-	ui = true
+        default = simple
 [alias]
-	s = status -s
-	lg = log --oneline --decorate --all --graph
-	find = log --pretty=oneline --since=\"1 week ago\" --name-status --grep
-	sup = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+        s = status -s
+        lg = log --oneline --decorate --all --graph
+[pull]
+        rebase = true
+[color]
+        ui = true
