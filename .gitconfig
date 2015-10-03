@@ -1,16 +1,16 @@
-[core]
-        user = Simon Frost
-        email = simonhfrost@gmail.com
-        excludesfile = ~/.gitignore
 [user]
-        name = Simon Frost
-        email = simon.frost@blacklane.com
+	name = simonhfrost
+	email = simonhfrost@gmail.com
 [push]
-        default = simple
-[alias]
-        s = status -s
-        lg = log --oneline --decorate --all --graph
+	default = simple
+[auto]
+	crlf = true
 [pull]
-        rebase = true
+	rebase = true
 [color]
-        ui = true
+	ui = true
+[alias]
+	st = status -s
+	lg = log --oneline --decorate --all --graph
+	co = checkout
+	
