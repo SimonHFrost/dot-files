@@ -1,0 +1,1 @@
+alias duplicatelines = sort js/translations/en.json | tr -d " " | uniq -c | grep "[2-9] "

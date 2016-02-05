@@ -13,4 +13,6 @@
 	st = status -s
 	lg = log --oneline --decorate --all --graph
 	co = checkout
+	diff-ws = diff -R
+	unstage = reset head [file]
 	
