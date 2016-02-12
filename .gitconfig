@@ -10,9 +10,7 @@
 [color]
 	ui = true
 [alias]
-	st = status -s
-	lg = log --oneline --decorate --all --graph
-	co = checkout
-	diff-ws = diff -R
+	fancy-log = log --oneline --decorate --all --graph
+	diff-whitespace = diff -R
 	unstage = reset head [file]
-	
+	reset-to-remote = git reset --hard origin/master
