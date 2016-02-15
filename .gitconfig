@@ -14,3 +14,4 @@
 	diff-whitespace = diff -R
 	unstage = reset head [file]
 	reset-to-remote = git reset --hard origin/master
+	deleted-merged = branch --merged master | grep -v master | xargs git branch -d
